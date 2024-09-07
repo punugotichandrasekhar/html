@@ -1,0 +1,108 @@
+<!DOCUMENTtype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>
+      LAYOUT2
+   </title>
+   <style>
+   *{
+     padding:0;
+     margin:0;
+     box-sizing:border-box;
+     font-size:25px;
+     font-family:Arial;
+    }
+    #parent-div{
+     width:100%;
+     margin:0 0 10px 0;
+     }
+    #logo-div{
+     width:50%;
+     height:80px;
+     background-color:lightgray;
+     line-height:80px;
+     float:left;
+     text-align:center;
+     }
+     #nav-div{
+     width:50%;
+     height:80px;
+     background-color:lightgray;
+     line-height:80px;
+     float:right;
+     text-align:center;
+     }
+     .clearfix::after{
+     display:block;
+     clear:both;
+     content:"";
+     }
+     #header-div{
+     width:100%;
+     height:100px;
+     background-color:lightgray;
+     line-height:100px;
+     text-align:center;
+     margin:0 0 10px 0;
+     }
+     #Introtext-div{
+     width:100%;
+     height:80px;
+     background-color:lightgray;
+     line-height:80px;
+     text-align:center;
+     margin:0 0 10px 0;
+     }
+     #box1-div{
+     width:30%;
+     height:310px;
+     background-color:lightgray;
+     line-height:310px;
+     float:left;
+     text-align:center;
+     
+     }
+     #box1-div:nth-child(2){
+     margin:0 5% 0 5%;
+     }
+     #Footer-div{
+     width:100%;
+     height:80px;
+     background-color:lightgray;
+     line-height:80px;
+     text-align:center;
+     }
+   </style>
+</head>
+<body>
+<div style="padding:0 100px 0 100px;">
+<div  id="parent-div" class="clearfix">
+     <div id="logo-div">
+           Logo
+     </div>
+     <div id="nav-div">
+           Navigation
+     </div>
+</div>
+<div id="header-div">
+Header / Banner
+</div>
+<div id="Introtext-div">
+ IntroTextArea
+</div>
+<div id="parent-div" class="clearfix">
+     <div id="box1-div">
+           Box1
+     </div>
+     <div id="box1-div">
+           Box2
+     </div>
+     <div id="box1-div">
+           Box3
+     </div>
+</div>
+<div id="Footer-div">Footer</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All User Details</title>
+</head>
+<body>
+    <h1>View All User Details</h1>
+
+    <table id="allUserDetailsTable">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="userDetailsBody"></tbody>
+    </table>
+
+    <script>
+        // Function to display all user details
+        function viewAllUserDetails() {
+            const userDetailsBody = document.getElementById('userDetailsBody');
+
+            // Clear existing table rows
+            userDetailsBody.innerHTML = '';
+
+            // Iterate through all users in localStorage
+            for (let i = 0; i < localStorage.length; i++) {
+                const username = localStorage.key(i);
+                const storedUser = localStorage.getItem(username);
+
+                // Parse the JSON string to get the user details object
+                const userDetails = JSON.parse(storedUser);
+
+                // Create a new table row for each user
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${username}</td>
+                    <td>${userDetails.password}</td>
+                `;
+
+                // Append the new row to the table body
+                userDetailsBody.appendChild(newRow);
+            }
+        }
+
+        // Call the function to display all user details
+        viewAllUserDetails();
+    </script>
+
+</body>
+</html>
