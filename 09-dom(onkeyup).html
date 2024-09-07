@@ -1,0 +1,17 @@
+<!DOCUMENTtype html>
+<html>
+  <style>
+
+  </style>
+  <body>
+    <input type="text" placeholder="Type something" onkeyup="
+      events()">
+    <p class="updated-data"></p>
+    <script>
+      function events(){
+      const val = document.querySelector('input').value;
+      document.querySelector('.updated-data').innerHTML = val; 
+      }
+    </script>
+  </body>
+</html>

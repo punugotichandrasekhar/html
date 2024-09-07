@@ -1,0 +1,61 @@
+<!DOCUMENTtype html>
+<html>
+    <head>
+       <title>Cart quantity</title>
+    </head>
+    <style>
+      div{display:inline;}
+    </style>
+    <body>
+      <p class="cart-quantity"></p>
+      <div>
+      <button onclick="
+        events();">Show Quantity</button>
+      <button onclick=" 
+      if (cartQuantity<=19){
+        cartQuantity+=1;
+        }
+        else{
+          alert('cart is full');
+        };events();
+      ">Add to Cart</button>
+      <button onclick=" 
+      if (cartQuantity<=18){
+        cartQuantity+=2;
+        }
+        else{
+          alert('Cart is full');};events();
+        ">+2</buttton>
+      <button onclick="
+      if(cartQuantity<=17){
+        cartQuantity+=3;
+        }
+      else{
+        alert('cart is full');
+      };events();">+3</button>
+      <button onclick=" 
+      if(cartQuantity<=16){
+        cartQuantity+=4;
+        }
+        else{
+          alert('cart is full');
+        };events();">+4</buttton>
+      <button onclick=" 
+      if(cartQuantity<=15){
+        cartQuantity+=5;
+        }
+        else{
+          alert('cart is full');};events();
+        " >+5</buttton>
+      <button onclick=" cartQuantity=0;console.log('cart quantity:',cartQuantity);events();">Reset Cart</button>
+      </div>
+        <script>
+          let cartQuantity = JSON.parse(localStorage.getItem('quantity'));
+          document.querySelector('.cart-quantity').innerText = `Cart quantity:${cartQuantity}`
+          function events(){
+          document.querySelector('.cart-quantity').innerText = `Cart quantity:${cartQuantity}`
+          localStorage.setItem('quantity',JSON.stringify(cartQuantity));
+          }
+        </script>   
+    </body>
+</html>

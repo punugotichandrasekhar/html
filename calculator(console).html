@@ -1,0 +1,36 @@
+<!DOCUMENTtype html>
+<html>
+  <head>
+    <style>
+      body{border:2px solid rgb(212, 193, 193);background-color:rgb(123, 0, 255);padding:10px;height:130px;width:200px;}
+      button{margin:5px;}
+    </style>
+  </head>
+  <body>
+    <div>
+    <button onclick=" calculation+='1'; console.log(calculation);">1</button>
+    <button onclick=" calculation+='2'; console.log(calculation);">2</button>
+    <button onclick=" calculation+='3'; console.log(calculation);">3</button>
+    <button onclick=" calculation+='+'; console.log(calculation);">+</button>
+    <button onclick=" console.log(eval(calculation));">=</button>
+    </div>
+    <div>
+      <button onclick=" calculation+='4'; console.log(calculation);">4</button>
+      <button onclick=" calculation+='5'; console.log(calculation);">5</button>
+      <button onclick=" calculation+='6'; console.log(calculation);">6</button>
+      <button onclick=" calculation+='*'; console.log(calculation);">*</button>
+      <button onclick=" calculation+='/'; console.log(calculation);">/</button>
+      </div>
+      <div>
+        <button onclick=" calculation+='7'; console.log(calculation);">7</button>
+        <button onclick=" calculation+='8'; console.log(calculation);">8</button>
+        <button onclick=" calculation+='9'; console.log(calculation);">9</button>
+        <button onclick=" calculation+='0'; console.log(calculation);">0</button>
+        <button onclick=" calculation+='00'; console.log(calculation);">00</button>
+        </div>
+        <button onclick=" calculation='';">Reset</button>
+    <script>
+       let calculation='';
+    </script>
+  </body>
+</html>

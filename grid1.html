@@ -3,11 +3,38 @@
   <head>
     <title>Grid layout</title> 
     <style>
-     .img-div{
-      }
+      img{border-radius:1050px;}
+      .grid1{
+       padding:10px;
+       border:2px solid blue;
+       background-color:lightgrey;
+       display:grid;
+       grid-template-columns:370px 100px 200px;}
+      .profile-info{
+        margin-right:300px;}
+      .profile{margin-left:620px;
+       width:300px;
+       text-align:center;
+       margin-top:60px;
+       }
+       button:hover{background-color:rgb(66,102,245);}
+    
+       .design-button{padding:10px;width:130px;font-size:25px;border-radius:20px;}
     </style>
   </head>
-  <body>  
-    <img class="img-div" src="C:\html\channelprof.jpg">
+  <body> 
+    <div class="grid1"> 
+      <div>
+        <img src="C:\Users\DELL\Pictures\hitman2.jpg">
+      </div>
+      <div>
+        <p><strong>Name:Rohit Sharma</strong></p>
+        <p>Indian cricket team Captain</p>
+        <p>since 2021</p>
+      </div>
+      <div class="profile">
+        <button class="design-button">Follow</button>
+      </div>
+    </div>
   </body>
 </html>
