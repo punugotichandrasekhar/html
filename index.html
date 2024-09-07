@@ -1,0 +1,32 @@
+<!DOCUMENTtype html>
+<html>
+  <head>
+    <style>
+      .grid-lay{display:grid;grid-template-columns:200px 75px;border:1px solid grey;width:275px;margin-bottom:10px;height:40px;}
+      
+      .grid-lay1{display:grid;grid-template-columns:50px 1fr 75px;border:1px solid grey;width:475px;height:40px;margin-bottom:10px;}
+      .grid-lay2{display:grid;grid-template-columns:315px 315px 315px 315px;border:1px solid grey;height:100px;row-gap:40px;column-gap:40px;padding:44px;font-size:30px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid-lay">
+    <div style="background-color:skyblue;">200px</div>
+    <div style="background-color:lightpink;">75px</div>
+    </div>
+    <div class="grid-lay1">
+    <div style="background-color:skyblue;">50px</div>
+    <div style="background-color:lightpink;">300px</div>
+    <div style="background-color:skyblue;">75px</div>
+    </div>
+    <div class="grid-lay2">
+    <div style="background-color:skyblue;height:30px;">col1</div>
+    <div style="background-color:skyblue;">col2</div>
+    <div style="background-color:skyblue;">col3</div>
+    <div style="background-color:skyblue;">col4</div>
+    <div style="background-color:skyblue;">col1</div>
+    <div style="background-color:skyblue;">col2</div>
+    <div style="background-color:skyblue;">col3</div>
+    <div style="background-color:skyblue;">col4</div>
+ </div>
+  </body>
+</html>

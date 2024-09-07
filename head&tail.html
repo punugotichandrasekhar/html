@@ -1,0 +1,51 @@
+<!DOCUMENTtype html>
+<html>
+  <style></style>
+  <body>
+    <button onclick="playGame('Head')">
+      Heads
+    </button>
+    <button onclick="playGame('Tail')">
+      Tails
+    </button>
+    <button onclick="score.wins = 0;score.loses = 0;">
+      Reset
+    </button>
+    <script>
+      const score = JSON.parse(localStorage.getItem('score'));
+      let comp='';
+      function compmove(){
+        const randnum = Math.random();
+        if(randnum >= 0.5){
+          comp = 'Tail';
+        }
+        else{
+          comp = 'Head';
+        }
+        return comp;
+      }
+      function playGame(guess){
+        const compMove = compmove();
+        if(guess == 'Head' && compMove == 'Head'){
+          score.wins+=1;
+          alert(`You pick ${guess},but it is ${compMove}
+wins=${score.wins} loses =${score.loses}`);
+       localStorage.setItem('score',JSON.stringify(score));  
+        }
+        else if(guess == 'Tail' && compMove == 'Tail'){
+          score.wins+=1;
+          alert(`You pick ${guess},but it is ${compMove}
+wins=${score.wins} loses =${score.loses}`);
+localStorage.setItem('score',JSON.stringify(score));  
+        }
+        else{
+          score.loses+=1;
+          alert(`You pick ${guess},but it is ${compMove}
+wins=${score.wins} loses =${score.loses}`);
+localStorage.setItem('score',JSON.stringify(score));  
+        }
+      }
+      
+    </script>
+  </body>
+</html>

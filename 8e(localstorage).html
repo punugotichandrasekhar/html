@@ -1,0 +1,50 @@
+<!DOCUMENTtype html>
+<html>
+  <head>
+    <style>
+      body{border:2px solid rgb(212, 193, 193);background-color:rgb(123, 0, 255);padding:10px;height:130px;width:200px;}
+      button{margin:5px;}
+    </style>
+  </head>
+  <body>
+    <div>
+    <button onclick="updateCalculation('1');">1</button>
+    <button onclick="updateCalculation('2') ">2</button>
+    <button onclick="updateCalculation('2') ">3</button>
+    <button onclick="updateCalculation('+') ">+</button>
+    <button onclick="updateCalculation('=')">=</button>
+    </div>
+    <div>
+      <button onclick="updateCalculation('4') ">4</button>
+      <button onclick="updateCalculation('5') ">5</button>
+      <button onclick="updateCalculation('6')">6</button>
+      <button onclick="updateCalculation('*') ">*</button>
+      <button onclick="updateCalculation('/') ">/</button>
+      </div>
+      <div>
+        <button onclick="updateCalculation('7') ">7</button>
+        <button onclick="updateCalculation('8') ">8</button>
+        <button onclick="updateCalculation('9') ">9</button>
+        <button onclick="updateCalculation('0') ">0</button>
+        <button onclick="updateCalculation('00') ">00</button>
+        </div>
+        <button onclick="updateCalculation('AC') ">Reset</button>
+    <script>
+      console.log(localStorage.getItem('calculate'));
+       let calculation= localStorage.getItem('calculate');
+       function updateCalculation(val){
+        if(val == '='){
+          console.log(eval(calculation));
+        }
+        else if(val == 'AC'){
+          calculation='';
+        }
+        else{
+          calculation+=val;
+          console.log(calculation);
+        }
+        localStorage.setItem('calculate',calculation) 
+        }
+    </script>
+  </body>
+</html>

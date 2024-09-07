@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      const basketball = {
+        name:'basketball',
+        price:1095,
+      };
+      const volleyball = basketball;
+      const basetball = {
+        name:'basketball',
+        price:1095,
+      };
+      function isSameProduct(product1,product2){
+        if(product1 === product2){
+          console.log('yes');
+        }
+        else{
+          console.log('no');
+        }
+      }
+      isSameProduct(basketball,volleyball)
+      isSameProduct(basketball,basetball)
+    </script>
+  </body>
+</html>

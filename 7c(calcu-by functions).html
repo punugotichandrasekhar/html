@@ -1,0 +1,98 @@
+<!DOCUMENTtype html>
+  <html>
+
+  <head>
+    <style>
+      body {
+        border: 2px solid rgb(212, 193, 193);
+        background-color: rgb(13, 13, 14);
+        padding: 10px;
+      }
+
+      button {
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+        border-radius: 22.5px;
+        background-color: rgb(66, 81, 86);
+        color: rgb(255, 255, 255);
+        border: none;
+      }
+
+      .button-func {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+        border-radius: 22.5px;
+        background-color: rgb(205, 118, 36);
+        color: rgb(255, 255, 255);
+        border: none;
+      }
+
+      p {
+        color: azure;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div>
+      <button onclick="updateCalculation('1');">1</button>
+      <button onclick="updateCalculation('2') ">2</button>
+      <button onclick="updateCalculation('2') ">3</button>
+      <button class='button-func' onclick="updateCalculation('+') ">+</button>
+
+    </div>
+    <div>
+      <button onclick="updateCalculation('4') ">4</button>
+      <button onclick="updateCalculation('5') ">5</button>
+      <button onclick="updateCalculation('6')">6</button>
+      <button class='button-func' onclick="updateCalculation('-') ">-</button>
+
+    </div>
+    <div>
+      <button onclick="updateCalculation('7') ">7</button>
+      <button onclick="updateCalculation('8') ">8</button>
+      <button onclick="updateCalculation('9') ">9</button>
+      <button class='button-func' onclick="updateCalculation('*') ">*</button>
+    </div>
+    <div>
+      <button onclick="updateCalculation('0') ">0</button>
+      <button onclick="updateCalculation('.') ">.</button>
+      <button onclick="updateCalculation('=')">=</button>
+      <button class='button-func' onclick="updateCalculation('/') ">/</button>
+    </div>
+    <div>
+      <button onclick="updateCalculation('00') ">00</button>
+      <button class='button-func' onclick="updateCalculation('AC') ">AC</button>
+
+      <button class='button-func' onclick="updateCalculation('x') ">x</button>
+    </div>
+    <p class="data"></p>
+    <p class="ans"></p>
+    <script>
+      let calculation = localStorage.getItem('calc');
+      function updateCalculation(val) {
+        if (val == '=') {
+          document.querySelector('.ans').innerText = eval(calculation);
+        }
+        else if (val == 'AC') {
+          calculation = '';
+        }
+        else if (val == 'x') {
+          let len = calculation.length
+          calculation = calculation.slice(0, len - 1);
+        }
+        else {
+          calculation += val;
+        }
+        document.querySelector('.data').innerText = calculation;
+        localStorage.setItem('calc', calculation);
+      }
+      console.log(localStorage);
+    </script>
+  </body>
+
+  </html>

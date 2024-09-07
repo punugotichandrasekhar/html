@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/Tipcalculator.css">
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+      <h1>Tip Calculator</h1>
+      <p>Enter the bill amount and the tip percentage to calculate the total.</p>
+      <p class="labels">Bill amount:</p>
+      <input type = "text" size="40" class="bill" >
+      <p class="labels">Tip percentage:</p>
+      <input type = "text" size="40" class="tip"  onkeydown="   
+      if(event.key === 'Enter'){
+        Cal();
+      }"><br><br><Br>
+      <button type="text" onclick="Cal();">Calculate</button>
+      <p class="Total-amt labels"></p>
+    <script src="scripts/Tipcounter.js"></script>
+  </body>
+</html>

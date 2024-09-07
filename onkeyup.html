@@ -1,0 +1,16 @@
+<!DOCUMENTtype html>
+<html>
+  <body>
+      <input onkeydown = "
+      if(event.key === 'Enter'){
+          myName();
+      }">
+      <button onclick = 'myName()'>Submit</button>
+      <p class="display"></p>
+  </body>
+  <script>
+    function myName(){
+      const name=document.querySelector('input').value
+     document.querySelector('.display').innerHTML = `Your name is :${name}`;}
+  </script>
+</html>
